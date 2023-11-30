@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온라인스토어</title>
+    <script src="https://kit.fontawesome.com/578df5cd94.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="main_user.html"><button>홈으로 가기</button></a></h1>
+            <div class="search">
+                <input type="search" class="searchbar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <ul>
+                <li><a href="categorypage_1.html">주방·생활용품</a></li>
+                <li><a href="categorypage_2.html">가구·인테리어</a></li>
+                <li><a href="categorypage_3.html">문구</a></li>
+                <li><a href="categorypage_4.html">화장품</a></li>
+                <li><a href="categorypage_5.html">여성복</a></li>
+                <li><a href="categorypage_6.html">남성복</a></li>
+                <li><a href="categorypage_7.html">이너웨어</a></li>
+                <li><a href="categorypage_8.html">악세서리</a></li>
+                <li><a href="categorypage_9.html">과자·음료</a></li>
+                <li><a href="categorypage_10.html">요리 소스</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="product-list">
+                <div class="product-list">
+                    <!-- 제품 목록 -->
+                    <li>
+                        <div class="product">
+                            <div class="image-container">
+                            <img src="./images/women/knitwear.jpg" id="img1" alt="Product Image">
+                        </div>
+                        <div class="info-container">
+    
+                            <div class="product-name" id="name1">베이지 니트 웨어</div>
+    
+                            <div class="price-container">
+                                <span class="discounted-price" id="price_saled1">75,900원</span>
+                            </div>
+                            
+                            <div class="buttons">
+                                <button class="add-to-cart" onclick="addToCart(501, '베이지 니트 웨어', 75900)">장바구니 담기</button>
+                                <button class="add-to-order" onclick="handleOrderCategory(501, '베이지 니트 웨어', 75900)">주문하기</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="product">
+                            <div class="image-container">
+                            <img src="./images/women/crop.jpg" id="img1" alt="Product Image">
+                        </div>
+                        <div class="info-container">
+    
+                            <div class="product-name" id="name1">크롭 무지 티셔츠</div>
+    
+                            <div class="price-container">
+                                <br>
+                                <br>
+                                <span class="discounted-price" id="price_saled1">54,900원</span>
+                            </div>
+                            
+                            <div class="buttons">
+                                <button class="add-to-cart" onclick="addToCart(502, '크롭 무지 티셔츠', 54900)">장바구니 담기</button>
+                                <button class="add-to-order" onclick="handleOrderCategory(502, '크롭 무지 티셔츠', 54900)">주문하기</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="product">
+                            <div class="image-container">
+                            <img src="./images/women/shirt.jpg" id="img1" alt="Product Image">
+                        </div>
+                        <div class="info-container">
+    
+                            <div class="product-name" id="name1">오버핏 셔츠</div>
+    
+                            <div class="price-container">
+                                <br>
+                                <br>
+                                <span class="discounted-price" id="price_saled1">36,900원</span>
+                            </div>
+                            
+                            <div class="buttons">
+                                <button class="add-to-cart" onclick="addToCart(503, '오버핏 셔츠', 36900)">장바구니 담기</button>
+                                <button class="add-to-order" onclick="handleOrderCategory(503, '오버핏 셔츠', 36900)">주문하기</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="product">
+                            <div class="image-container">
+                            <img src="./images/women/jacket.jpg" id="img1" alt="Product Image">
+                        </div>
+                        <div class="info-container">
+    
+                            <div class="product-name" id="name1">여성 자켓</div>
+    
+                            <div class="price-container">
+                                <br>
+                                <br>
+                                <span class="discounted-price" id="price_saled1">99,000원</span>
+                            </div>
+                            
+                            <div class="buttons">
+                                <button class="add-to-cart" onclick="addToCart(504, '여성 자켓', 99000)">장바구니 담기</button>
+                                <button class="add-to-order" onclick="handleOrderCategory(504, '여성 자켓', 99000)">주문하기</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="product">
+                            <div class="image-container">
+                            <img src="./images/women/skirt.jpg" id="img1" alt="Product Image">
+                        </div>
+                        <div class="info-container">
+    
+                            <div class="product-name" id="name1">베이지 주름 치마</div>
+    
+                            <div class="price-container">
+                                <span class="sale-percentage" id="sale1">20% OFF</span>
+                                <span class="original-price" id="price2">58,900원</span>
+                                <span class="discounted-price" id="price_saled1">53,010원</span>
+                            </div>
+                            
+                            <div class="buttons">
+                                <button class="add-to-cart" onclick="addToCart(505, '베이지 주름 치마', 53010)">장바구니 담기</button>
+                                <button class="add-to-order" onclick="handleOrderCategory(505, '베이지 주름 치마', 53010)">주문하기</button>
+                            </div>
+                        </div>
+                    </li>
+                    </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>

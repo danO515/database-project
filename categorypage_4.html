@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온라인스토어</title>
+    <script src="https://kit.fontawesome.com/578df5cd94.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="main_user.html"><button>홈으로 가기</button></a></h1>
+            <div class="search">
+                <input type="search" class="searchbar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <ul>
+                <li><a href="categorypage_1.html">주방·생활용품</a></li>
+                <li><a href="categorypage_2.html">가구·인테리어</a></li>
+                <li><a href="categorypage_3.html">문구</a></li>
+                <li><a href="categorypage_4.html">화장품</a></li>
+                <li><a href="categorypage_5.html">여성복</a></li>
+                <li><a href="categorypage_6.html">남성복</a></li>
+                <li><a href="categorypage_7.html">이너웨어</a></li>
+                <li><a href="categorypage_8.html">악세서리</a></li>
+                <li><a href="categorypage_9.html">과자·음료</a></li>
+                <li><a href="categorypage_10.html">요리 소스</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="product-list">
+                <!-- 제품 목록 -->
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/beauty/lotion.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">세타필 로션</div>
+
+                        <div class="price-container">
+                            <span class="discounted-price" id="price_saled1">1,300원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(401, '세타필 로션', 1300)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(401, '세타필 로션', 1300)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/beauty/cream.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">알로에 베라 수딩 크림</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">54,000원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(402, '알로에 베라 수딩 크림', 54000)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(402, '알로에 베라 수딩 크림', 54000)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/beauty/maskpack.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">아이오페 마스크팩</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">10,000원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(403, '아이오페 마스크팩', 10000)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(403, '아이오페 마스크팩', 10000)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/beauty/cleansingoil.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">퓨어 클렌징오일</div>
+
+                        <div class="price-container">
+                            <span class="sale-percentage" id="sale1">20% OFF</span>
+                            <span class="original-price" id="price2">23,000원</span>
+                            <span class="discounted-price" id="price_saled1">18,400원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(404, '퓨어 클렌징오일', 18400)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(404, '퓨어 클렌징오일', 18400)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/beauty/cleansingfoam.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">포어썬 클렌징 폼</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">19,000원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(405, '포어썬 클렌징 폼', 19000)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(405, '포어썬 클렌징 폼', 19000)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                </div>
+        </div>
+    </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>

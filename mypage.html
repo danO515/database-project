@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/578df5cd94.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>마이 페이지</title>
+    <style>
+        /* 전체 페이지 스타일 설정 */
+        body .order {
+            font-family: 'Nanum Gothic';
+            background-color: whitesmoke;
+            margin: 0;
+            /* 외부여백 */
+            padding: 0;
+            /* 내부여백 */
+        }
+
+        /* 페이지 섹션 스타일 설정 */
+        section {
+            margin: 20px;
+        }
+
+        /* 섹션 타이틀 스타일 설정 */
+        h2 {
+            color: black;
+        }
+
+        /* 테이블 스타일 설정 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* 셀 테두리 합치기 */
+            margin-top: 10px;
+        }
+
+        /* 테이블 헤더와 셀 스타일 설정 */
+        th,
+        td {
+            border: 1px solid lightgray;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* 테이블 헤더 스타일 설정 */
+        th {
+            background-color: gray;
+            color: white;
+        }
+
+        /* 버튼 스타일 설정 */
+        button.order {
+            background-color: gray;
+            color: white;
+            padding: 8px;
+            border: none;
+            /* 버튼 테두리 제거 */
+            border-radius: 3px;
+            /* 버튼 모서리 둥글게 */
+            cursor: pointer;
+            /* 커서 올렸을때 포인터로 변경 */
+            text-align: center;
+        }
+
+        /* 버튼 가운데 정렬 */
+        .button {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 페이지 헤더 -->
+    <header>
+        <div class="container">
+            <h1><a href="./main_user.html"><button>홈으로 가기</button></a></h1>
+            <div class="search">
+                <input type="search" class="searchbar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="./main.html"><button><i class="fa-solid fa-door-open"></i><br>로그아웃</button></a>
+                    </li>
+                    <li>
+                        <a href="./mypage.html"><button><i class="fa-solid fa-house"></i><br>마이페이지</button></a>
+                    </li>
+                    <li>
+                        <a href="./shopping_cart.html" type="_blank"><button><i class="fa-solid fa-basket-shopping"></i><br>장바구니</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 페이지 섹션 -->
+    <section class="order">
+        <!-- 섹션 타이틀 -->
+        <h2>주문 정보 확인</h2>
+
+        <!-- 주문 정보를 보여줄 테이블 -->
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>주문 번호</th>
+                    <th>상품 정보</th>
+                    <th>주문 금액</th>
+                    <th>주문 날짜</th>
+                    <th>입금 상태</th>
+                    <th>주문 취소</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 주문 정보가 들어갈 자리 -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 주문 취소 스크립트 -->
+    <script>
+        // 페이지 로드 시 주문 정보 표시
+        document.addEventListener('DOMContentLoaded', function () {
+            displayOrders();
+        });
+
+        // 주문 정보를 보여주는 함수
+        function displayOrders() {
+            let orders = JSON.parse(localStorage.getItem('orders')) || [];
+            let orderTable = document.getElementById('orderTable');
+            let tbody = orderTable.querySelector('tbody');
+
+            // 기존 내용 초기화
+            tbody.innerHTML = '';
+
+            // 각 주문을 테이블에 추가
+            orders.forEach(order => {
+                let row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${order.id}</td>
+                    <td>${order.name}</td>
+                    <td>${order.price}원</td>
+                    <td>${order.date}</td>
+                    <td>입금 완료</td>
+                    <td><button class="order" onclick="cancelOrder(${order.id})">주문 취소</button></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // 주문 취소 함수
+        function cancelOrder(orderId) {
+            // 여기에 주문 취소 로직 추가 (실제 서버와 통신하여 주문 취소)
+            let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+            // 주문을 찾아서 삭제
+            let updatedOrders = orders.filter(order => order.id !== orderId);
+
+            // 변경된 주문 목록을 다시 localStorage에 저장
+            localStorage.setItem('orders', JSON.stringify(updatedOrders));
+            
+            // 임시로 알림으로 대체
+            alert(`주문 번호 ${orderId}가 취소되었습니다.`);
+
+            // 다시 주문 정보 표시
+            displayOrders();
+        }
+    </script>
+</body>
+
+</html>

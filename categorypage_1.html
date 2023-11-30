@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온라인스토어</title>
+    <script src="https://kit.fontawesome.com/578df5cd94.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="main_user.html"><button>홈으로 가기</button></a></h1>
+            <div class="search">
+                <input type="search" class="searchbar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <ul>
+                <li><a href="categorypage_1.html">주방·생활용품</a></li>
+                <li><a href="categorypage_2.html">가구·인테리어</a></li>
+                <li><a href="categorypage_3.html">문구</a></li>
+                <li><a href="categorypage_4.html">화장품</a></li>
+                <li><a href="categorypage_5.html">여성복</a></li>
+                <li><a href="categorypage_6.html">남성복</a></li>
+                <li><a href="categorypage_7.html">이너웨어</a></li>
+                <li><a href="categorypage_8.html">악세서리</a></li>
+                <li><a href="categorypage_9.html">과자·음료</a></li>
+                <li><a href="categorypage_10.html">요리 소스</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="product-list">
+                <!-- 제품 목록 -->
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/kitchen/pen.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">테팔 후라이팬 28cm</div>
+
+                        <div class="price-container">
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">32,000원</span>
+                            <span class="discounted-price" id="price_saled1">28,800원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(101, '테팔 후라이팬 28cm', 28800)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(101, '테팔 후라이팬 28cm', 28800)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/kitchen/mug.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">곰돌이 머그컵</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">14,900원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(102, '곰돌이 머그컵', 14900)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(102, '곰돌이 머그컵', 14900)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/kitchen/detergent.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">1L 세제 4개입</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">9,900원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(103, '1L 세제 4개입', 9900)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(103, '1L 세제 4개입', 9900)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/kitchen/toaster.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">2구 팝업 토스트기</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">13,500원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(104, '2구 팝업 토스트기', 13500)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(104, '2구 팝업 토스트기', 13500)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/kitchen/brush.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">실내용 빗자루</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">6,900원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(105, '실내용 빗자루', 6900)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(105, '실내용 빗자루', 6900)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                </div>
+        </div>
+    </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>

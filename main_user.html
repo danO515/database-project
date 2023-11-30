@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang='ko'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>온라인스토어</title>
+        <script src="https://kit.fontawesome.com/578df5cd94.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="#"><button>홈으로 가기</button></a></h1> <!-- 로고 (클릭시 메인화면)-->
+            <div class="search">
+                <input type="search" class="searchbar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>  <!-- 검색창 -->
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="main.html"><button><i class="fa-solid fa-door-open"></i><br>로그아웃</button></a>
+                    </li>
+                    <li>
+                        <a href="mypage.html"><button><i class="fa-solid fa-house"></i><br>마이페이지</button></a>
+                    </li>
+                    <li>
+                        <a href="shopping_cart.html"><button><i class="fa-solid fa-basket-shopping"></i><br>장바구니</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+    </header>
+    <main>
+        <div class="left">
+            <ul>
+                <li><a href="categorypage_1.html">주방·생활용품</a></li>
+                <li><a href="categorypage_2.html">가구·인테리어</a></li>
+                <li><a href="categorypage_3.html">문구</a></li>
+                <li><a href="categorypage_4.html">화장품</a></li>
+                <li><a href="categorypage_5.html">여성복</a></li>
+                <li><a href="categorypage_6.html">남성복</a></li>
+                <li><a href="categorypage_7.html">이너웨어</a></li>
+                <li><a href="categorypage_8.html">악세서리</a></li>
+                <li><a href="categorypage_9.html">과자·음료</a></li>
+                <li><a href="categorypage_10.html">요리 소스</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="image">
+                <a href="#"><img src="./images/cold.jpg" class="cold"></a>
+            </div>
+            <div class="sale">
+                <h2>주간 특가 Sale<span>최대 50%</span></h2><br>
+                <ul>
+                    <li>
+                        <a href="#"><img src="./images/accessories/bini.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">검정 비니</div>
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">28,700원</span><br>
+                            <span class="discounted-price" id="price_saled1">25,830원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(801, '검정 비니', 25830, 15)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(801, '검정 비니', 25830)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/beauty/cleansingoil.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">퓨어 클렌징 오일</div>
+                            <span class="sale-percentage" id="sale1">20% OFF</span>
+                            <span class="original-price" id="price2">23,000원</span><br>
+                            <span class="discounted-price" id="price_saled1">18,400원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(404, '퓨어 클렌징 오일', 18400, 20)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(404, '퓨어 클렌징 오일', 18400)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/stationary/diary.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">모눈 다이어리</div>
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">8,000원</span><br>
+                            <span class="discounted-price" id="price_saled1">7,200원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(302, '모눈 다이어리', 7200, 10)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(302, '모눈 다이어리', 7200)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/living/mattress.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">지누스 매트리스</div>
+                            <span class="sale-percentage" id="sale1">30% OFF</span>
+                            <span class="original-price" id="price2">299,000원</span><br>
+                            <span class="discounted-price" id="price_saled1">209,300원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(205, '지누스 매트리스', 209300, 30)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(205, '지누스 매트리스', 209300)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/innerwear/menpajama.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">남성 파자마</div>
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">32,900원</span><br>
+                            <span class="discounted-price" id="price_saled1">29,610원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(702, '남성 파자마', 29610, 15)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(702, '남성 파자마', 29610)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/kitchen/pen.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">테팔 후라이팬 28cm</div>
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">32,000원</span><br>
+                            <span class="discounted-price" id="price_saled1">28,800원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(101, '테팔 후라이팬 28cm', 28800, 10)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(101, '테팔 후라이팬 28cm', 28800)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/women/skirt.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">베이지 주름 치마</div>
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">58,900원</span><br>
+                            <span class="discounted-price" id="price_saled1">53,010원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(505, '베이지 주름 치마', 53010, 10)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(505, '베이지 주름 치마', 53010)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/sauces/soy.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">샘표 양조간장</div>
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">4,500원</span><br>
+                            <span class="discounted-price" id="price_saled1">4,050원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(1005, '샘표 양조간장', 4050, 5)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(1005, '샘표 양조간장', 4050)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/food/mountaindew.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">마운틴듀 400ml</div>
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">1,900원</span><br>
+                            <span class="discounted-price" id="price_saled1">1,710원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(901, '마운틴듀 400ml', 1710, 10)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(901, '마운틴듀 400ml', 1710)">주문하기</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/men/Vknitwear.jpg" id="sale"></a>
+                        <div class="sale-buttons">
+                            <div class="product-name" id="name1">V넥 블랙 니트</div>
+                            <span class="sale-percentage" id="sale1">20% OFF</span>
+                            <span class="original-price" id="price2">85,400원</span><br>
+                            <span class="discounted-price" id="price_saled1">59,780원</span><br>
+                            <button class="add-to-cart" onclick="addToCartMain(601, 'V넥 블랙 니트', 59780, 20)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrder(601, 'V넥 블랙 니트', 59780)">주문하기</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>  
+</body>
+
+<script src="script.js"></script>
+</html>

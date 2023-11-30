@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온라인스토어</title>
+    <script src="https://kit.fontawesome.com/578df5cd94.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="main_user.html."><button>홈으로 가기</button></a></h1>
+            <div class="search">
+                <input type="search" class="searchbar">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="left">
+            <ul>
+                <li><a href="categorypage_1.html">주방·생활용품</a></li>
+                <li><a href="categorypage_2.html">가구·인테리어</a></li>
+                <li><a href="categorypage_3.html">문구</a></li>
+                <li><a href="categorypage_4.html">화장품</a></li>
+                <li><a href="categorypage_5.html">여성복</a></li>
+                <li><a href="categorypage_6.html">남성복</a></li>
+                <li><a href="categorypage_7.html">이너웨어</a></li>
+                <li><a href="categorypage_8.html">악세서리</a></li>
+                <li><a href="categorypage_9.html">과자·음료</a></li>
+                <li><a href="categorypage_10.html">요리 소스</a></li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="product-list">
+                <!-- 제품 목록 -->
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/stationary/note.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">스프링 노트</div>
+
+                        <div class="price-container">
+                            <span class="discounted-price" id="price_saled1">2,500원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(301, '스프링 노트', 2500)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(301, '스프링 노트', 2500)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/stationary/diary.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">모눈 다이어리</div>
+
+                        <div class="price-container">
+                            <span class="sale-percentage" id="sale1">10% OFF</span>
+                            <span class="original-price" id="price2">8,000원</span>
+                            <span class="discounted-price" id="price_saled1">7,200원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(302, '모눈 다이어리', 7200)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(302, '모눈 다이어리', 7200)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/stationary/pen.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">3색 볼펜</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">1,900원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(303, '3색 볼펜', 1900)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(303, '3색 볼펜', 1900)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/stationary/felttippen.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">컴퓨터 싸인펜</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">1,000원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(304, '컴퓨터 싸인펜', 1000)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(304, '컴퓨터 싸인펜', 1000)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product">
+                        <div class="image-container">
+                        <img src="./images/stationary/triangleruler.jpg" id="img1" alt="Product Image">
+                    </div>
+                    <div class="info-container">
+
+                        <div class="product-name" id="name1">삼각자</div>
+
+                        <div class="price-container">
+                            <br>
+                            <br>
+                            <span class="discounted-price" id="price_saled1">2,000원</span>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="add-to-cart" onclick="addToCart(305, '삼각자', 2000)">장바구니 담기</button>
+                            <button class="add-to-order" onclick="handleOrderCategory(305, '삼각자', 2000)">주문하기</button>
+                        </div>
+                    </div>
+                </li>
+                </div>
+        </div>
+    </main>
+</body>
+
+<script src="script.js"></script>
+
+</html>
